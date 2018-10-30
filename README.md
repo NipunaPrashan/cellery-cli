@@ -31,8 +31,34 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`cellery autocomplete [SHELL]`](#cellery-autocomplete-shell)
 * [`cellery build [NAME] [OPTIONS]`](#cellery-build-name-options)
+* [`cellery configure`](#cellery-configure)
 * [`cellery help [COMMAND]`](#cellery-help-command)
+* [`cellery images`](#cellery-images)
+
+## `cellery autocomplete [SHELL]`
+
+display autocomplete installation instructions
+
+```
+USAGE
+  $ cellery autocomplete [SHELL]
+
+ARGUMENTS
+  SHELL  shell type
+
+OPTIONS
+  -r, --refresh-cache  Refresh cache (ignores displaying instructions)
+
+EXAMPLES
+  $ cellery autocomplete
+  $ cellery autocomplete bash
+  $ cellery autocomplete zsh
+  $ cellery autocomplete --refresh-cache
+```
+
+_See code: [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete/blob/v0.1.0/src/commands/autocomplete/index.ts)_
 
 ## `cellery build [NAME] [OPTIONS]`
 
@@ -53,6 +79,23 @@ EXAMPLES
 
 _See code: [src/commands/build.ts](https://github.com/NipunaPrashan/cellery/blob/v1.0.0/src/commands/build.ts)_
 
+## `cellery configure`
+
+Configure the cellery context that you are working on
+
+```
+USAGE
+  $ cellery configure
+
+OPTIONS
+  -h, --help  show CLI help
+
+EXAMPLE
+  $ cellery configure
+```
+
+_See code: [src/commands/configure.ts](https://github.com/NipunaPrashan/cellery/blob/v1.0.0/src/commands/configure.ts)_
+
 ## `cellery help [COMMAND]`
 
 display help for cellery
@@ -69,4 +112,21 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.3/src/commands/help.ts)_
+
+## `cellery images`
+
+List cell images
+
+```
+USAGE
+  $ cellery images
+
+OPTIONS
+  -h, --help  show CLI help
+
+EXAMPLE
+  $ cellery images
+```
+
+_See code: [src/commands/images.ts](https://github.com/NipunaPrashan/cellery/blob/v1.0.0/src/commands/images.ts)_
 <!-- commandsstop -->
